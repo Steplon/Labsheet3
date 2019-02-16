@@ -5,8 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Exercise1_Expenses"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="40*"/>
+        </Grid.RowDefinitions>
+
+
+
+        <ListBox Name="lbxExpenses" Margin="30" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"/>
         
+        <StackPanel Grid.Column="0" Grid.Row="1" Orientation="Vertical">
+            <Button Name="btnAddExpense" Margin="10" Width="150" Height="50" Content="Add Expense" BorderBrush="#FF1EB917" Click="BtnAddExpense_Click"/>
+            <Button Name="btnRemoveExpense" Margin="10" Width="100" Height="50" Content="Remove" BorderBrush="#FFE22E2E" Click="BtnRemoveExpense_Click"/>
+        </StackPanel>
+
+        <TextBlock Name="txblTotalExpenses" Grid.Column="1" Grid.Row="1" Margin="50"/>
+
+
+
     </Grid>
 </Window>
