@@ -49,8 +49,12 @@ namespace Exercise1_Expenses
         {
             Expenses exp = lbxExpenses.SelectedItem as Expenses;
 
-            expenses.Remove(exp);
-            DisplayExpenses();
+            if (exp != null)
+            {
+                expenses.Remove(exp);
+                DisplayExpenses();
+            }
+
         }
 
 
