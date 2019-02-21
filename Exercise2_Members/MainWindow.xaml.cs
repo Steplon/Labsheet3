@@ -54,6 +54,7 @@ namespace Exercise2_Members
             members.Add(new Member(name,type,date));
 
             DisplayUpdate();
+            ClearScreen();
         }
 
         private void DisplayUpdate()
@@ -67,6 +68,14 @@ namespace Exercise2_Members
                 numMmbers++;
             }
             txblTotalMembers.Text = $"Total Member: {numMmbers}";
+        }
+
+        public void ClearScreen()
+        {
+            lbxMembers.SelectedIndex = -1;
+            tbxName.Clear();
+            dpDateJoined.ClearValue(DatePicker.SelectedDateProperty);
+
         }
     }
 }
