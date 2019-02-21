@@ -47,7 +47,9 @@ namespace Exercise1_Expenses
 
         private void BtnRemoveExpense_Click(object sender, RoutedEventArgs e)
         {
-            expenses.RemoveAt(expenses.Count-1);
+            Expenses exp = lbxExpenses.SelectedItem as Expenses;
+
+            expenses.Remove(exp);
             DisplayExpenses();
         }
 
